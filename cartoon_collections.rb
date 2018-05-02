@@ -12,11 +12,15 @@ def summon_captain_planet(planeteer_calls)
   planeteer_calls.map { |call| call.capitalize + "!"}
 end
 
+def count_small_letters(word)
+  scan(/[a-z]/).count
+end
+
 def long_planeteer_calls(assorted_words)
   i = 0
   while i < assorted_words.length
     assorted_words.each do |word|
-      if word.length > 4
+      if count_small_letters(word) > 4
         return true
       else
         return false
