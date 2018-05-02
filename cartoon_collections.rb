@@ -9,25 +9,8 @@ def summon_captain_planet(planeteer_calls)
 end
 
 def long_planeteer_calls(assorted_words)
-  i = 0
-  collection_array = []
-  while i < assorted_words.length
-    assorted_words.each do |word|
-      def count_small_letters
-        scan(/[a-z]/).count
-      end
-      if word.count_small_letters > 4
-        collection_array << true
-      else
-        collection_array << false
-      end
-    end
-    i += 1
-    if collection_array.find("false")
-      return false
-    else
-      return true
-    end
+  calls.any? do |x|
+    x.length > 4
   end
 end
 
