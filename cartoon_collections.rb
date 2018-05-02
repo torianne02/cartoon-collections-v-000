@@ -28,7 +28,7 @@ def long_planeteer_calls(assorted_words)
     end
     i += 1
   end
-  if collection_array.find(false)
+  if collection_array.find("false")
     return false
   else
     return true
