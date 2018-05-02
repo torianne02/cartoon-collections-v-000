@@ -22,6 +22,7 @@ def long_planeteer_calls(assorted_words)
         return false
       end
     end
+    i += 1
   end
 end
 
