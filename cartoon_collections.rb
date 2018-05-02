@@ -14,19 +14,24 @@ end
 
 def long_planeteer_calls(assorted_words)
   i = 0
+  collection_array = []
   while i < assorted_words.length
     assorted_words.each do |word|
       def count_small_letters
         scan(/[a-z]/).count
       end
       if word.count_small_letters > 4
-        return true
+        collection_array << true
       else
-        return false
+        collection_array << false
       end
     end
     i += 1
   end
+  if collection_array.find(false)
+    return false
+  else
+    return true
 end
 
 def find_the_cheese# code an argument here
